@@ -7,6 +7,7 @@ const Admin = () => {
     const [players1, setPlayers1] = useState([]);
     const [players2, setPlayers2] = useState([]);
     const [player1, setPlayer1] = useState("");
+
     
     const handleSubmit = (e) => {
         e.preventDefault();
