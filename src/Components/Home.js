@@ -1,21 +1,18 @@
 import React from 'react';
-import MatchCard from './MatchCard';
-import Timeline from './Timeline';
+import { Route, Routes } from 'react-router-dom';
+import Current from './Current';
+import Finished from './Finished';
+import Header from './Header';
+import Navbar from './Navbar';
 
 const Home = () => {
     return (
-       <>
-
-            <h4 className='font-bold px-2 mt-6  mb-3 text-white'>
-                Current Match
-            </h4>
-            <div className='px-2'>
-                <MatchCard />
-                <div className="mt-5">
-                    <Timeline />
-                </div>
-            </div>
-
+        <>
+            <Navbar />
+            <Routes>
+            <Route exact path = "/" element ={<Current />} />
+            <Route exact path = "/finished" element ={<Finished />} />
+            </Routes>
         </>
     )
 }
